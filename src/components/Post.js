@@ -26,7 +26,7 @@ export default function Post() {
   }, []);
 
   return (
-    <main className="bg-green-100 min-h-screen p-12">
+    <main className="bg-blue-100 min-h-screen p-12">
       <section className="container mx-auto">
         <h1 className="text-5xl flex justify-center cursive">
           Blog Posts Page
@@ -40,16 +40,16 @@ export default function Post() {
               <article>
                 <Link to={"/post/" + post.slug.current} key={post.slug.current}>
                   <span
-                    className="block h-64 relative rounded shadow leading-snug bg-white border-l-8 "
+                    className="block h-64 relative rounded shadow leading-snug bg-gray-800 border-8 border-white"
                     key={index}
                   >
                     <img
                       src={post.mainImage.asset.url}
                       alt={post.mainImage.alt}
-                      className="block relative h-full flex justify-end items-end pr-4 pb-4"
+                      className="block relative h-full flex justify-end items-end "
                     />
                     <span>
-                      <h3 className="text-gray-800 text-lg font-blog px-3 py-4 bg-red-700 text-red-100 bg-opacity-75 rounded">
+                      <h3 className="text-white text-xl font-blog px-3 py-4 bg-blue-700 text-white bg-opacity-75 border-8 border-white rounded">
                         {post.title}
                       </h3>
                     </span>

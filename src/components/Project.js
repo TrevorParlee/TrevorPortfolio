@@ -22,16 +22,16 @@ export default function Project() {
   }, []);
 
   return (
-    <main className=" bg-green-100 min-h-screen p-12">
-      <section className="container mx-auto">
+    <main className=" bg-blue-300 min-h-screen p-12">
+      <section className="container mx-auto ">
         <h1 className="text-5xl flex justify-center cursive">My Projects </h1>
         <h2 className="text-lg text-gray-600 flex justify-center mb-12">
           Welcome to my projects page!!!
         </h2>
-        <section className="grid grid-cols-2 gap-8">
+        <section className="grid grid-cols-2 gap-8 ">
           {projectData &&
             projectData.map((project, index) => (
-              <article className="relative rounded-lg shadow-xl bg-white p-16">
+              <article className="relative rounded-lg shadow-xl bg-white p-16 border-8 border-gray-800">
                 <h3 className="text-gray-800 text-3xl font-bold mb-2 hover:text-red-700">
                   <a
                     href={project.link}
@@ -62,7 +62,7 @@ export default function Project() {
                     href={project.link}
                     rel="noopener noreferrer"
                     target="_blank"
-                    className="text-red-500 font-bold hover:underline hover:text-red-400 text-xl"
+                    className="text-blue-700 font-bold hover:underline hover:text-red-400 text-xl"
                   >
                     View The Project{" "}
                     <span role="img" aria-label="right pointer">
