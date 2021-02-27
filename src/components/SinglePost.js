@@ -20,6 +20,7 @@ export default function SinglePost() {
       title,
       _id,
       slug,
+      
       mainImage{
         asset->{
           _id,
@@ -27,8 +28,10 @@ export default function SinglePost() {
         }
       },
       body,
+      
       "name": author->name,
-      "authorImage": author->image
+      "authorImage": author->image,
+      
     }`
       )
       .then((data) => setSinglePost(data[0]))
@@ -55,6 +58,12 @@ export default function SinglePost() {
                 <p className="cursive flex items-center pl-2 text-2xl">
                   {singlePost.name}
                 </p>
+                <a
+                  href={singlePost.link}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  className="text-blue-700 font-bold hover:underline hover:text-red-400 text-xl"
+                ></a>
               </div>
             </div>
           </div>
